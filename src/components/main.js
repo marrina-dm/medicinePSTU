@@ -1,5 +1,6 @@
 import Swiper from 'swiper/bundle';
-import {Script} from "../utils/script";
+import {Script} from "../utils/script.js";
+import $ from "jquery";
 
 export class Main {
     constructor() {
@@ -44,6 +45,13 @@ export class Main {
                 }
             }
         });
+
+        $('#services').click(() => location.href = '#/services');
+
+        if (window.location.hash === '#/') {
+            $('.footer-title').hide();
+            $('.footer-info dl').hide();
+        }
 
         Script.forwardCall();
     }

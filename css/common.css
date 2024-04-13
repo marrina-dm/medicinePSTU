@@ -184,6 +184,11 @@ a {
     font-size: 20px;
     font-weight: 700;
     line-height: 1.6;
+    transition: all .3s;
+}
+
+.menu-link:hover {
+    color: rgba(66, 69, 81, 0.6);
 }
 
 .search label {
@@ -254,6 +259,33 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.footer-title {
+    color: rgb(20, 157, 158);
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.footer-info dl {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 38px;
+}
+
+.footer-info dt {
+    color: rgb(66, 69, 81);
+    margin-bottom: 5px;
+}
+
+.footer-info dd {
+    color: rgb(20, 157, 158);
+    margin-bottom: 5px;
 }
 
 .footer-license {

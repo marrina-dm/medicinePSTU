@@ -1,4 +1,5 @@
 import {Main} from "./components/main.js";
+import {Doctors} from "./components/doctors.js";
 
 export class Router {
     constructor() {
@@ -10,6 +11,33 @@ export class Router {
                 styles: 'css/index.css',
                 load: () => {
                     new Main();
+                }
+            },
+            {
+                route: '#/services',
+                title: 'Услуги',
+                template: 'templates/services.html',
+                styles: 'css/index.css',
+                load: () => {
+                    new Main();
+                }
+            },
+            {
+                route: '#/about',
+                title: 'О клинике',
+                template: 'templates/about.html',
+                styles: 'css/about.css',
+                load: () => {
+                    new Main();
+                }
+            },
+            {
+                route: '#/doctors',
+                title: 'Врачи',
+                template: 'templates/doctors.html',
+                styles: 'css/doctors.css',
+                load: () => {
+                    new Doctors();
                 }
             }
         ]
