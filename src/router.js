@@ -1,5 +1,7 @@
 import { Main } from "./components/main.js";
 import { Doctors } from "./components/doctors.js";
+import {Doctor} from "./components/doctor.js";
+import {Price} from "./components/price.js";
 
 export class Router {
   constructor() {
@@ -11,7 +13,7 @@ export class Router {
         styles: "css/index.css",
         load: () => {
           new Main();
-        },
+        }
       },
       {
         route: "#/services",
@@ -20,7 +22,7 @@ export class Router {
         styles: "css/index.css",
         load: () => {
           new Main();
-        },
+        }
       },
       {
         route: "#/about",
@@ -29,7 +31,7 @@ export class Router {
         styles: "css/about.css",
         load: () => {
           new Main();
-        },
+        }
       },
       {
         route: "#/doctors",
@@ -38,7 +40,7 @@ export class Router {
         styles: "css/doctors.css",
         load: () => {
           new Doctors();
-        },
+        }
       },
       {
         route: "#/doctor",
@@ -46,9 +48,18 @@ export class Router {
         template: "templates/doctor.html",
         styles: "css/doctor.css",
         load: () => {
-          new Main();
-        },
+          new Doctor();
+        }
       },
+      {
+        route: "#/price",
+        title: "Цены",
+        template: "templates/price.html",
+        styles: "css/price.css",
+        load: () => {
+          new Price();
+        }
+      }
     ];
   }
 

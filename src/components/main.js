@@ -46,17 +46,6 @@ export class Main {
       },
     });
 
-    new Swiper(".swiper-doctors", {
-      slidesPerView: 3,
-      spaceBetween: 100,
-      watchSlidesVisibility: true,
-      rewind: true,
-      pagination: {
-        el: ".swiper-doctors-pagination",
-        clickable: true,
-      },
-    });
-
     $("#services").click(() => (location.href = "#/services"));
 
     if (window.location.hash === "#/") {
