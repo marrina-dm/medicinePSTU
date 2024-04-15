@@ -23,9 +23,10 @@ module.exports = {
                 {from: "templates", to: "templates"},
                 {from: "css", to: "css"},
                 {from: "static/fonts", to: "fonts"},
-                {from: "static/img", to: "img"}
-            ],
-        }),
+                {from: "static/img", to: "img"},
+                {from: "static/files", to: "files"}
+            ]
+        })
     ],
     module: {
         rules: [

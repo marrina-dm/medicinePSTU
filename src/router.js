@@ -1,5 +1,7 @@
 import {Main} from "./components/main.js";
 import {Doctors} from "./components/doctors.js";
+import {Price} from "./components/price.js";
+import {Specialist} from "./components/specialist.js";
 
 export class Router {
     constructor() {
@@ -38,6 +40,24 @@ export class Router {
                 styles: 'css/doctors.css',
                 load: () => {
                     new Doctors();
+                }
+            },
+            {
+                route: '#/specialist',
+                title: 'Информация о специалисте',
+                template: 'templates/specialist.html',
+                styles: 'css/specialist.css',
+                load: () => {
+                    new Specialist();
+                }
+            },
+            {
+                route: '#/price',
+                title: 'Цены',
+                template: 'templates/price.html',
+                styles: 'css/price.css',
+                load: () => {
+                    new Price();
                 }
             }
         ]
