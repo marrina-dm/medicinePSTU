@@ -1,6 +1,8 @@
 import $ from "jquery";
 
 export class Script {
+    static formInputs = $('.form-input');
+
     static forwardCall() {
         let popup = $('.popup');
         $('button.forward-call').click(function () {
@@ -14,58 +16,43 @@ export class Script {
             }
         });
 
-
-        let formInputs = $('.form-input');
-        let inputColor = formInputs.css('border-color');
-        let error = $('.error-input');
-        let checkboxInput = $('.checkbox-input');
-
-
-        formInputs.blur(function () {
-            error.hide();
-            formInputs.css('border-color', inputColor);
-            checkboxInput.css('color', 'rgb(66, 69, 81)');
-            let checked = $('#checkbox').prop("checked");
-
-            for (let input of formInputs) {
-                let element = $(input);
-                if (!element.val()) {
-                    element.css('border-color', 'red');
-                    element.parent('label').next().show();
-                }
-            }
-
-            if (!checked) {
-                checkboxInput.css('color', 'red');
-            }
-        });
-
         $('#forward-call-btn').click(function () {
-            let hasError = false;
-            let checked = $('#checkbox').prop("checked");
-
-            error.hide();
-            formInputs.css('border-color', inputColor);
-            checkboxInput.css('color', 'rgb(66, 69, 81)');
-
-            for (let input of formInputs) {
-                let element = $(input);
-                if (!element.val()) {
-                    element.css('border-color', 'red');
-                    element.parent('label').next().show();
-                    hasError = true;
-                }
-            }
-
-            if (!checked) {
-                checkboxInput.css('color', 'red');
-                hasError = true;
-            }
-
-            if (!hasError) {
+            if (!Script.validForm()) {
                 $('.forward-call').hide();
                 $('.success-message').show();
             }
+
+            Script.formInputs.blur(function () {
+                Script.validForm();
+            });
         });
+    }
+
+    static validForm() {
+        let hasError = false;
+        let checked = $('#checkbox').prop("checked");
+        let inputColor = this.formInputs.css('border-color');
+        let error = $('.error-input');
+        let checkboxInput = $('.checkbox-input');
+
+        error.hide();
+        this.formInputs.css('border-color', inputColor);
+        checkboxInput.css('color', 'rgb(66, 69, 81)');
+
+        for (let input of this.formInputs) {
+            let element = $(input);
+            if (!element.val()) {
+                element.css('border-color', 'red');
+                element.parent('label').next().show();
+                hasError = true;
+            }
+        }
+
+        if (!checked) {
+            checkboxInput.css('color', 'red');
+            hasError = true;
+        }
+
+        return hasError;
     }
 }

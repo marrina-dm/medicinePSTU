@@ -1,6 +1,6 @@
 import { Main } from "./components/main.js";
 import { Doctors } from "./components/doctors.js";
-import {Doctor} from "./components/doctor.js";
+import {Specialist} from "./components/specialist.js";
 import {Price} from "./components/price.js";
 
 export class Router {
@@ -43,12 +43,12 @@ export class Router {
         }
       },
       {
-        route: "#/doctor",
+        route: "#/specialist",
         title: "Врач",
-        template: "templates/doctor.html",
-        styles: "css/doctor.css",
+        template: "templates/specialist.html",
+        styles: "css/specialist.css",
         load: () => {
-          new Doctor();
+          new Specialist();
         }
       },
       {
@@ -65,8 +65,7 @@ export class Router {
 
   async openRoute() {
     const newRoute = this.routes.find(
-      (item) => item.route === window.location.hash
-    );
+      (item) => item.route === window.location.hash.split("?")[0]);
 
     if (!newRoute) {
       window.location.href = "#/";

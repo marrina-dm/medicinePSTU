@@ -33,6 +33,22 @@
     display: none;
 }
 
+.ui-accordion-header-icon {
+    background: url(../img/arrow.svg) no-repeat center;
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 43px;
+}
+
+.ui-accordion-header-active .ui-accordion-header-icon {
+    background: url("../img/arrow.svg") no-repeat center;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
 .price-table {
     border-spacing: 0;
     width: 100%;
@@ -135,20 +151,6 @@
 .cell-btn {
     padding: 6px 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .blog-news-section {
     padding: 62px 0 66px 0;

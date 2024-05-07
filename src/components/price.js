@@ -84,13 +84,12 @@ export class Price {
 
     processPrice(priceList, id) {
         const cell = document.getElementById(id);
-        cell.replaceChildren();
 
         const table = document.createElement('table');
         table.className = 'price-table';
         cell.appendChild(table);
 
-        priceList.forEach((priceData, i) => {
+        priceList.forEach(priceData => {
             const row = table.insertRow();
 
             if (!parseInt(priceData.category)) {

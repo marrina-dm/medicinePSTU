@@ -574,3 +574,21 @@
 .map-frame {
     border-radius: 20px;
 }
+
+.reviews {
+    padding: 62px 0;
+    background: rgb(20, 157, 158);
+}
+
+.reviews .container {
+    padding: 30px 35px 20px 35px;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+}
+
+.reviews-title {
+    color: rgb(255, 90, 48);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.21;
+}
