@@ -420,6 +420,17 @@
     text-align: center;
 }
 
+.spec-img {
+    width: 223px;
+    height: 223px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.spec-img img {
+    width: 100%;
+}
+
 .personal-name {
     margin: 7px 0 10px 0;
     color: rgb(255, 255, 255);

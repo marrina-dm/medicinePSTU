@@ -119,6 +119,7 @@ a {
 .header-buttons {
     display: flex;
     column-gap: 26px;
+    row-gap: 13px;
 }
 
 .btn {
@@ -501,4 +502,133 @@ a {
     text-align: left;
     margin-left: 60px;
     display: none;
+}
+
+.menu-burger,
+.search-icon {
+    display: none;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.close {
+    display: none;
+}
+
+.header-menu-contacts {
+    display: none;
+}
+
+@media screen and (max-width: 1224px) {
+    .header-phones {
+        display: none;
+    }
+
+    .menu-burger,
+    .search-icon,
+    .close {
+        display: block;
+    }
+
+    .header-menu {
+        background: #149D9E;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 25%;
+        overflow-y: scroll;
+        padding: 5px 0;
+    }
+
+    .header-menu .container {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .header-menu-contacts p,
+    .header-menu-contacts a {
+        color: white;
+    }
+
+    .header-menu-contacts {
+        margin-top: 80px;
+        display: block;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 30px;
+    }
+
+    .menu-link {
+        color: white;
+    }
+
+    .search {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header-buttons {
+        flex-direction: column;
+    }
+
+    .forward-call {
+        padding: 0;
+        height: 45px;
+        width: 260px;
+    }
+
+    .logo {
+        max-width: 270px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header-address {
+        display: none;
+    }
+
+    .header-buttons {
+        row-gap: 7px;
+    }
+
+    .forward-call {
+        width: 190px;
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .header-menu {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .header-actions .container {
+        flex-wrap: wrap;
+    }
+
+    .header-buttons {
+        flex-direction: row;
+        column-gap: 10px;
+        width: 100%;
+    }
+
+    .forward-call {
+        width: 50%;
+        font-size: 12px;
+    }
+
+    .header-menu {
+        width: 75%;
+    }
 }

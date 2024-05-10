@@ -26,6 +26,8 @@ export class Script {
                 Script.validForm();
             });
         });
+
+        this.relativePage();
     }
 
     static validForm() {
@@ -54,5 +56,14 @@ export class Script {
         }
 
         return hasError;
+    }
+
+    static relativePage() {
+        $('.menu-burger').click(function () {
+            $('.header-menu').show();
+        });
+        $('.close').click(function () {
+            $('.header-menu').hide();
+        })
     }
 }

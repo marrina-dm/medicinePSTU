@@ -77,6 +77,7 @@ export class Router {
     ).then((response) => response.text());
     document.getElementById("styles").setAttribute("href", newRoute.styles);
     document.getElementById("page-title").innerText = newRoute.title;
+    window.scrollTo(0, 0);
     newRoute.load();
   }
 }
