@@ -27,6 +27,14 @@ export class Script {
             });
         });
 
+        if (window.location.hash === "#/") {
+            $(".footer-title").hide();
+            $(".footer-info dl").hide();
+        } else {
+            $(".footer-title").show();
+            $(".footer-info dl").show();
+        }
+
         this.relativePage();
     }
 
@@ -64,6 +72,15 @@ export class Script {
         });
         $('.close').click(function () {
             $('.header-menu').hide();
-        })
+        });
+        $('.popup-close').click(function () {
+            $('.popup').hide();
+        });
+
+        if ($('.menu-burger').css('display') === 'block') {
+            $('.menu-link').click(function () {
+                $('.header-menu').hide();
+            });
+        }
     }
 }

@@ -31,27 +31,26 @@ export class Main {
             },
             loop: true,
             breakpoints: {
-                640: {
+                375: {
                     slidesPerView: 2,
                     spaceBetween: 20,
                 },
-                768: {
+                550: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                874: {
                     slidesPerView: 4,
                     spaceBetween: 40,
                 },
-                1024: {
+                1240: {
                     slidesPerView: 5,
-                    spaceBetween: 75,
-                },
-            },
+                    spaceBetween: 40,
+                }
+            }
         });
 
         $("#services").click(() => (location.href = "#/services"));
-
-        if (window.location.hash === "#/") {
-            $(".footer-title").hide();
-            $(".footer-info dl").hide();
-        }
 
         Script.forwardCall();
 

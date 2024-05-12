@@ -377,9 +377,11 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
+    margin: auto;
     align-items: center;
     justify-content: center;
     display: none;
+    overflow-y: scroll;
 }
 
 .popup .container {
@@ -389,6 +391,7 @@ a {
     text-align: center;
     border-radius: 20px;
     box-shadow: 7px 12px 17px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
 }
 
 .success-message {
@@ -523,6 +526,10 @@ a {
     display: none;
 }
 
+.popup-close {
+    display: none;
+}
+
 @media screen and (max-width: 1224px) {
     .header-phones {
         display: none;
@@ -534,10 +541,15 @@ a {
         display: block;
     }
 
+    .header-actions {
+        padding-bottom: 20px;
+    }
+
     .header-menu {
         background: #149D9E;
         display: none;
         position: fixed;
+        z-index: 100;
         top: 0;
         left: 0;
         bottom: 0;
@@ -581,7 +593,8 @@ a {
         flex-direction: column;
     }
 
-    .forward-call {
+    .btn-blue,
+    .btn-transparent {
         padding: 0;
         height: 45px;
         width: 260px;
@@ -589,6 +602,16 @@ a {
 
     .logo {
         max-width: 270px;
+    }
+
+    .adaptive-footer-contacts {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 884px) {
+    .header-menu {
+        width: 50%;
     }
 }
 
@@ -601,7 +624,8 @@ a {
         row-gap: 7px;
     }
 
-    .forward-call {
+    .btn-blue,
+    .btn-transparent {
         width: 190px;
         font-size: 14px;
         height: 40px;
@@ -609,6 +633,50 @@ a {
 
     .header-menu {
         width: 50%;
+    }
+
+    .popup .container {
+        width: 100%;
+    }
+
+    .popup-close {
+        display: block;
+        margin-left: auto;
+    }
+
+    .checkbox-input {
+        margin-left: 1.75em;
+    }
+
+    .forward-form input[type='text'],
+    #phone {
+        width: 100%;
+    }
+
+    .footer-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 516px) {
+    .forward-title {
+        font-size: 24px;
+    }
+
+    .forward-text,
+    .checkbox-input {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .footer-license {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .footer-info dl,
+    .footer-license a {
+        font-size: 16px;
     }
 }
 
@@ -623,7 +691,8 @@ a {
         width: 100%;
     }
 
-    .forward-call {
+    .btn-blue,
+    .btn-transparent {
         width: 50%;
         font-size: 12px;
     }

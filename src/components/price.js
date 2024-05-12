@@ -1,9 +1,11 @@
 import $ from "jquery";
+import {Script} from "../utils/script";
 
 export class Price {
     constructor() {
         $('.price-table-row').each((index, elem) => index % 2 === 1 ? $(elem).addClass('even') : $(elem).addClass('odd'));
         this.accordion();
+        Script.forwardCall();
 
         Promise.all([
             'students.json',

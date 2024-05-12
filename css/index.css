@@ -133,7 +133,8 @@
 
 .adventures-items {
     list-style: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-content: space-between;
 }
@@ -184,8 +185,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 49px;
+    justify-content: center;
+    gap: 69px;
 }
 
 .service-item {
@@ -239,7 +240,6 @@
     background: rgb(239, 239, 239);
     position: relative;
     overflow: hidden;
-    /*background: url("../img/woman.png") bottom -214px right -315px no-repeat, linear-gradient(rgb(239, 239, 239) 0%, rgb(239, 239, 239) 100%);*/
 }
 
 .why-img-block {
@@ -283,7 +283,7 @@
 .why-item {
     border-radius: 20px;
     max-width: 744px;
-    background: linear-gradient(90.00deg, rgba(2, 211, 151, 0.36),rgba(255, 255, 255, 0.4) 100%);
+    background: linear-gradient(90.00deg, rgba(2, 211, 151, 0.36), rgba(255, 255, 255, 0.4) 100%);
     display: flex;
     gap: 10px;
     padding: 10px 35px 6px 119px;
@@ -362,6 +362,7 @@
 
 .catalog-item img {
     width: 100%;
+    height: 100%;
 }
 
 .catalog-name {
@@ -412,17 +413,16 @@
 
 .swiper-personal {
     margin-top: 40px;
-    width: 1414px;
+    max-width: 1414px;
 }
 
 .swiper-personal .swiper-slide {
-    max-width: 223px;
+    width: 223px;
     text-align: center;
 }
 
 .spec-img {
-    width: 223px;
-    height: 223px;
+    width: 100%;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -469,6 +469,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 35px;
 }
 
 .blog-news-items {
@@ -501,8 +502,15 @@
     line-height: 24px;
 }
 
-.blog-news-item img {
+.blog-img,
+.news-img {
+    max-width: 300px;
     margin-left: -5px;
+}
+
+.blog-img img,
+.news-img img {
+    width: 100%;
 }
 
 .all-blog,
@@ -517,7 +525,8 @@
 }
 
 .popup._type_normal._position_top {
-    visibility: hidden; !important;
+    visibility: hidden;
+!important;
 }
 
 .map {
@@ -529,7 +538,8 @@
     background: rgb(217, 217, 217);
     display: flex;
     justify-content: space-between;
-    padding: 43px 52px 180px 43px;
+    padding: 43px 52px 43px 43px;
+    gap: 30px;
 }
 
 .map-info,
@@ -540,7 +550,7 @@
 
 .map-info {
     padding: 36px 28px 28px 33px;
-    max-width: 469px;
+    min-width: 469px;
     box-sizing: border-box;
 }
 
@@ -580,6 +590,8 @@
 
 .map-image {
     padding: 25px;
+    width: 100%;
+    min-height: 350px;
 }
 
 .map-frame {
@@ -595,6 +607,7 @@
     padding: 30px 35px 20px 35px;
     border-radius: 20px;
     background: rgb(255, 255, 255);
+    width: 85%;
 }
 
 .reviews-title {
@@ -602,4 +615,322 @@
     font-size: 28px;
     font-weight: 700;
     line-height: 1.21;
+}
+
+@media screen and (max-width: 1023px) {
+    .promo-title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .adventures-items {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 100px;
+    }
+
+    .why-img-block {
+        display: none;
+    }
+
+    .why-info-block {
+        max-width: 1270px;
+    }
+
+    .why-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .catalog-name {
+        padding: 3px 6px;
+        font-size: 16px;
+    }
+
+    .catalog-items {
+        gap: 25px;
+    }
+
+    .name-bottom .catalog-name {
+        bottom: 8px;
+        right: 8px;
+    }
+
+    .name-top .catalog-name {
+        top: 8px;
+        left: 8px;
+    }
+
+    .map .container {
+        flex-wrap: wrap;
+    }
+
+    .map-info {
+        width: 100%;
+    }
+
+    .schedule {
+        justify-content: flex-end;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 862px) {
+    .service-item {
+        width: 294px;
+        height: 249px;
+        padding-top: 10px;
+    }
+
+    .service-head {
+        transform: translateY(0%);
+    }
+
+    .service-head img {
+        width: 20%;
+    }
+
+    .service-title {
+        font-size: 20px;
+    }
+
+    .service-text {
+        opacity: 1;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .swiper-pagination {
+        display: none;
+    }
+
+    .btn-more {
+        margin-left: 0;
+        width: 155px;
+        height: 40px;
+        line-height: 1;
+    }
+
+    .promo-info {
+        bottom: 25px;
+        left: 50px;
+    }
+
+    .promo-title {
+        font-size: 24px;
+    }
+
+    .why-item {
+        padding-left: 35px;
+    }
+
+    .why-info-text {
+        font-size: 16px;
+    }
+
+    .blog-news-section .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .schedule {
+        justify-content: space-between;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 696px) {
+    .service-items {
+        gap: 30px;
+    }
+
+    .catalog-items {
+        grid-template-columns: 1fr;
+    }
+
+    #ultra-voice,
+    #massage {
+        grid-row: unset;
+        grid-column: unset;
+    }
+
+    .catalog-title {
+        font-size: 22px;
+    }
+
+    .map-info {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .schedule-title {
+        font-size: 16px;
+    }
+
+    .schedule {
+        font-size: 16px;
+    }
+
+    .schedule-day,
+    .schedule-time {
+        margin-bottom: 0;
+    }
+
+    .schedule-title-second {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .promo-title {
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+
+    .btn-more {
+        width: 133px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .mySwiper .swiper-button-prev, .mySwiper .swiper-button-next {
+        width: 28px;
+        height: 28px;
+    }
+
+    .adventures-items {
+        row-gap: 55px;
+    }
+
+    .adventure-item:after {
+        width: 140px;
+        height: 140px;
+    }
+
+    .adventure-number {
+        font-size: 50px;
+    }
+
+    .adventure-text {
+        font-size: 16px;
+    }
+
+    .why-title {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .adventures-title {
+        margin-bottom: 38px;
+        line-height: 25px;
+    }
+
+    .adventure-item {
+        height: 90px;
+    }
+
+    .adventure-item:after {
+        width: 100px;
+        height: 100px;
+    }
+
+    .adventure-number {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .adventure-text {
+        font-size: 14px;
+    }
+
+    .reviews .container {
+        padding: 10px;
+    }
+
+    .why-item {
+        padding: 10px;
+    }
+
+    .why-info-title {
+        font-size: 16px;
+    }
+
+    .why-info-text {
+        font-size: 14px;
+    }
+
+    .catalog-head {
+        flex-wrap: wrap;
+    }
+
+    .head-action {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .catalog {
+        padding: 20px 0;
+    }
+
+    .reviews {
+        padding: 30px 0;
+    }
+
+    .personal-title {
+        font-size: 20px;
+    }
+
+    .personal-text {
+        font-size: 14px;
+    }
+
+    .blog-news-section {
+        padding: 30px 0;
+    }
+
+    .blog-news-section .container {
+        gap: 15px;
+    }
+
+    .blog-news-items {
+        gap: 20px;
+    }
+
+    .blog-title,
+    .news-title {
+        font-size: 22px;
+    }
+
+    .blog-name {
+        font-size: 16px;
+    }
+
+    .map .container {
+        padding: 10px;
+    }
+
+    .map-info,
+    .map-image {
+        padding: 10px;
+    }
+
+    .schedule-title {
+        font-size: 15px;
+    }
+
+    .schedule {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .map-image {
+        min-height: 250px;
+    }
 }
