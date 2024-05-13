@@ -87,6 +87,7 @@
     font-weight: 700;
     line-height: 29px;
     text-transform: uppercase;
+    position: relative;
 }
 
 .price-table-row.odd {
