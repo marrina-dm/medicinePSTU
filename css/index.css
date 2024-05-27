@@ -84,6 +84,7 @@
     z-index: 1;
     margin-bottom: 41px;
     display: inline-block;
+    max-width: 1000px;
 }
 
 .promo-title::before {
@@ -467,7 +468,6 @@
 
 .blog-news-section .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 35px;
 }
@@ -491,26 +491,30 @@
     font-size: 15px;
     font-weight: 500;
     line-height: 18px;
+    margin-top: 10px;
 }
 
 .blog-name {
     margin-top: 8px;
     color: rgb(0, 0, 0);
     font-family: Montserrat, sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    max-width: 300px;
 }
 
 .blog-img,
 .news-img {
     max-width: 300px;
     margin-left: -5px;
+    border-radius: 20px;
 }
 
 .blog-img img,
 .news-img img {
     width: 100%;
+    border-radius: 20px;
 }
 
 .all-blog,

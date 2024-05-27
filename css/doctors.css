@@ -45,11 +45,11 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 78px;
+    gap: 55px;
 }
 
 .specialist-item {
-    width: 358px;
+    width: 275px;
     position: relative;
     transition: all .3s;
     height: auto;
@@ -79,7 +79,7 @@
 }
 
 .spec-img {
-    height: 336px;
+    height: 275px;
     overflow: hidden;
     border-radius: 20px;
     position: relative;
@@ -108,14 +108,14 @@
 
 .spec-name {
     color: rgb(0, 0, 0);
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 1.21;
 }
 
 .spec-position {
     color: rgb(255, 90, 48);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.21;
 }

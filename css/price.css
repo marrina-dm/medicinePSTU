@@ -56,9 +56,6 @@
 
 .price-table-head {
     background: rgb(20, 157, 158);
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
 }
 
 .price-table-head:first-of-type {
@@ -76,8 +73,11 @@
 }
 
 .price-table-head th:first-child {
-    margin-right: auto;
-    padding-right: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+.price-table-head th:last-child {
+    border-radius: 0 20px 20px 0;
 }
 
 .price-table-row {
@@ -87,7 +87,6 @@
     font-weight: 700;
     line-height: 29px;
     text-transform: uppercase;
-    position: relative;
 }
 
 .price-table-row.odd {
@@ -159,7 +158,6 @@
 
 .blog-news-section .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 35px;
 }
@@ -183,26 +181,30 @@
     font-size: 15px;
     font-weight: 500;
     line-height: 18px;
+    margin-top: 10px;
 }
 
 .blog-name {
     margin-top: 8px;
     color: rgb(0, 0, 0);
     font-family: Montserrat, sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    max-width: 300px;
 }
 
 .blog-img,
 .news-img {
     max-width: 300px;
     margin-left: -5px;
+    border-radius: 20px;
 }
 
 .blog-img img,
 .news-img img {
     width: 100%;
+    border-radius: 20px;
 }
 
 .all-blog,
@@ -216,100 +218,10 @@
     display: inline-block;
 }
 
-.empty-col {
-    width: 283px;
-    box-sizing: border-box;
-}
-
-@media screen and (max-width: 1023px) {
-    .inner-row {
-        font-size: 20px;
-    }
-
-    .table-title-inner-category,
-    .price-table-row {
-        font-size: 22px;
-    }
-
-    .price-table-head th {
-        font-size: 24px;
-    }
-
-    .empty-col {
-        width: 270px;
-    }
-}
-
-@media screen and (max-width: 802px) {
-    .promo .container {
-        gap: 40px;
-    }
-
-    .price-promo-title {
-        font-size: 36px;
-    }
-
-    .price-table-head th {
-        padding: 7px 15px 8px 25px;
-        font-size: 20px;
-    }
-
-    .table-title-category, .table-title-inner-category, .cell-name {
-        padding: 7px 15px 8px 25px;
-    }
-
-    .table-title-inner-category, .price-table-row {
-        font-size: 20px;
-    }
-
-    .cell-price {
-        padding: 0 25px;
-    }
-}
-
 @media screen and (max-width: 767px) {
     .blog-news-section .container {
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .empty-col {
-        width: 200px;
-    }
-
-    .inner-row {
-        font-size: 16px;
-        line-height: 1;
-    }
-}
-
-@media screen and (max-width: 602px) {
-    .cell-btn .btn-transparent {
-        width: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .empty-col {
-        width: 118px;
-    }
-
-    .price-table-head th,
-    .table-title-inner-category, .price-table-row {
-        font-size: 17px;
-        line-height: 1;
-    }
-
-    .ui-accordion-header-icon {
-        right: 20px;
-    }
-
-    .cell-btn {
-        padding: 0;
-    }
-
-    .price .container {
-        padding: 0 10px;
     }
 }
 
