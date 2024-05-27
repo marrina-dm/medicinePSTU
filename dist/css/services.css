@@ -1,0 +1,289 @@
+.banner {
+    padding: 543px 0 92px 0;
+    background-image: url("../img/banners/services-bg.png");
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::after {
+    filter: blur(43px);
+    background: rgba(255, 255, 255, 0.76);
+    content: '';
+    width: 60%;
+    height: 160px;
+    position: absolute;
+    bottom: 65px;
+    left: -31px;
+}
+
+.banner-title {
+    color: rgb(20, 157, 158);
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+
+.description {
+    padding: 63px 0 9px 0;
+}
+
+.text {
+    color: rgb(34, 34, 34);
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.ui-accordion-header {
+    margin-top: 44px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 20px;
+    background: rgb(232, 232, 232);
+    padding: 23px 37px 24px 37px;
+}
+
+.department-title {
+    color: rgb(20, 157, 158);
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+}
+
+.ui-accordion-header-icon {
+    background: url(../img/arrow-blue.svg) no-repeat center;
+    width: 23px;
+    height: 15px;
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 43px;
+}
+
+.ui-accordion-header-active .ui-accordion-header-icon {
+    background: url("../img/arrow-blue.svg") no-repeat center;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.ui-accordion-content {
+    padding-top: 56px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 23px;
+    column-gap: 69px;
+}
+
+.service-img {
+    max-width: 395px;
+    margin-right: -18px;
+}
+
+.service-img img {
+    width: 100%;
+}
+
+.blog-news-section {
+    padding: 62px 0 66px 0;
+}
+
+.blog-news-section .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.blog-news-items {
+    margin-top: 30px;
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.blog-link,
+.news-link {
+    text-decoration: none;
+    font-size: 0;
+}
+
+.blog-date {
+    color: rgb(163, 163, 163);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 10px;
+}
+
+.blog-name {
+    margin-top: 8px;
+    color: rgb(0, 0, 0);
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    max-width: 300px;
+}
+
+.blog-img,
+.news-img {
+    max-width: 300px;
+    margin-left: -5px;
+    border-radius: 20px;
+}
+
+.blog-img img,
+.news-img img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.all-blog,
+.all-news {
+    margin-top: 20px;
+    color: rgb(255, 90, 48);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    display: inline-block;
+}
+
+.popular-services {
+    padding: 58px 0 84px 0;
+}
+
+.popular-title {
+    color: rgb(20, 157, 158);
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    margin-bottom: 41px;
+}
+
+.popular-list {
+    display: flex;
+    gap: 27px;
+}
+
+.popular-element {
+    border-radius: 20px;
+    background: rgb(245, 245, 245);
+    position: relative;
+    transition: all .5s ease;
+}
+
+.popular-element:hover {
+    box-shadow: 5px 5px 14px 0 rgba(20, 157, 158, 0.25);
+}
+
+.popular-element:hover .service-title {
+    color: rgb(255, 255, 255);
+    background: rgb(20, 157, 158);
+}
+
+.service-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: rgb(34, 34, 34);
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: capitalize;
+    transition: all .5s ease;
+    height: 83px;
+    background: rgb(245, 245, 245);
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 24px 0 0 26px;
+    box-sizing: border-box;
+}
+
+.form {
+    padding: 52px 0 115px 0;
+    background: rgb(245, 245, 245) url(../img/form-bg.png) right -170px bottom -107px no-repeat;
+}
+
+.form-title {
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 41px;
+    margin-bottom: 17px;
+}
+
+.form-text {
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    margin-bottom: 53px;
+}
+
+.services-form {
+    display: grid;
+    grid-template-columns: repeat(2, 426px);
+    column-gap: 40px;
+    row-gap: 59px;
+}
+
+.services-form input[type='text'] {
+    margin-bottom: 0;
+}
+
+.num-code {
+    background-color: white;
+}
+
+#process-btn {
+    margin: 0;
+}
+
+.option-description {
+    color: rgb(66, 69, 81);
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    align-self: center;
+    margin-left: -128px;
+}
+
+.phone {
+    margin-bottom: 0;
+}
+
+.error-base-input {
+    margin: 0 0 0 27px;
+}
+
+.form-msg {
+    height: 288px;
+    display: none;
+}
+
+.form-msg .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.success-text {
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 41px;
+}
