@@ -57,7 +57,7 @@ export class Service {
         }
 
         const banner = document.getElementById('banner');
-        banner.style.backgroundImage = "url('../img/banners/service/" + service.banner + "')";
+        banner.style.backgroundImage = "url('img/banners/service/" + service.banner + "')";
 
         const bannerTitle = document.getElementById('banner-title');
         bannerTitle.innerText = service.title;
