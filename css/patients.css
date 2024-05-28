@@ -1,0 +1,120 @@
+.banner {
+    padding: 60px 0 473px;
+    background-image: url("../img/banners/about-bg.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.banner .container {
+    text-align: right;
+}
+
+.banner-title {
+    font-size: 56px;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.banner-text {
+    color: rgb(0, 99, 81);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.21;
+}
+
+.about-docs {
+    padding: 55px 0;
+}
+
+.docs-items {
+    list-style: none;
+}
+
+.document {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 42px;
+    align-items: center;
+}
+
+.document-name {
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    line-height: 1.21;
+    text-decoration: none;
+}
+
+.document-name:hover {
+    text-decoration: underline;
+}
+
+.map {
+    padding: 66px 0 79px 0;
+}
+
+.map .container {
+    border-radius: 20px;
+    background: rgb(217, 217, 217);
+    display: flex;
+    justify-content: space-between;
+    padding: 43px 52px 43px 43px;
+    gap: 30px;
+}
+
+.map-info,
+.map-image {
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+}
+
+.map-info {
+    padding: 36px 28px 28px 33px;
+    min-width: 469px;
+    box-sizing: border-box;
+}
+
+.map-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+.schedule-title {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 15px;
+    color: rgb(66, 69, 81);
+}
+
+.schedule {
+    display: flex;
+    justify-content: space-between;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(20, 157, 158);
+}
+
+.schedule-title-second {
+    margin-top: 53px;
+}
+
+.schedule-day,
+.schedule-time {
+    margin-bottom: 10px;
+}
+
+.map-image {
+    padding: 25px;
+    width: 100%;
+    min-height: 350px;
+}
+
+.map-frame {
+    border-radius: 20px;
+}

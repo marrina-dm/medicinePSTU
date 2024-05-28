@@ -47,6 +47,15 @@ p {
     margin-top: 20px;
 }
 
+.description-title {
+    color: rgb(20, 157, 158);
+    font-family: "Montserrat", sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 41px;
+    text-transform: uppercase;
+}
+
 .advantages {
     padding: 66px 0;
     background: rgb(245, 245, 245) url("../img/pyatno.png") right center no-repeat;
